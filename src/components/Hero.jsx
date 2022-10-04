@@ -8,7 +8,7 @@ function Hero() {
     <section className='relative flex min-h-[90vh] flex-col justify-center bg-eb-light-gray'>
       <div className='container'>
         <div className='flex items-center justify-between gap-8 overflow-hidden'>
-          <div className='flex w-[40%] flex-col items-start justify-center gap-6'>
+          <div className='z-10 flex w-[40%] flex-col items-start justify-center gap-6'>
             <h1 className='text-5xl leading-tight text-eb-dark-blue'>
               Next generation digital banking
             </h1>
