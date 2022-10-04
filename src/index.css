@@ -8,6 +8,14 @@ body {
   font-size: 18px;
 }
 
-.bg-eb-gradient {
-  @apply bg-gradient-to-r from-eb-lime-green to-eb-bright-cyan;
+@layer components {
+  .social-icon:hover path {
+    @apply fill-eb-lime-green transition-colors;
+  }
+}
+
+@layer utilities {
+  .bg-eb-gradient {
+    @apply bg-gradient-to-r from-eb-lime-green to-eb-bright-cyan;
+  }
 }
