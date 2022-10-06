@@ -3,13 +3,15 @@ import { Header, Footer, Hero, Features, Articles } from './components';
 
 function App() {
   return (
-    <div>
+    <>
       <Header />
-      <Hero />
-      <Features />
-      <Articles />
+      <main>
+        <Hero />
+        <Features />
+        <Articles />
+      </main>
       <Footer />
-    </div>
+    </>
   );
 }
 
