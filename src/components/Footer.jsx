@@ -43,8 +43,8 @@ function Footer() {
   return (
     <footer className='bg-eb-dark-blue py-12 text-white'>
       <div className='container'>
-        <div className='flex gap-36'>
-          <div className='flex flex-col items-center justify-between gap-4'>
+        <div className='flex flex-col gap-12 md:gap-16 lg:flex-row'>
+          <div className='flex flex-col items-center justify-between gap-8'>
             <img src={logo} alt='logo' />
             <div className='flex items-center justify-center gap-3'>
               {socialLinks.map(({ url, icon }) => (
@@ -55,7 +55,7 @@ function Footer() {
             </div>
           </div>
 
-          <div className='grid grid-cols-2 gap-x-20 gap-y-4'>
+          <div className='mx-auto grid max-w-sm grid-cols-1 gap-x-20 gap-y-4 text-center md:grid-cols-2 lg:ml-16 lg:text-left'>
             {navItems.map((item) => (
               <a
                 key={item}
@@ -67,7 +67,7 @@ function Footer() {
             ))}
           </div>
 
-          <div className='ml-auto flex flex-col items-end justify-center gap-6'>
+          <div className='flex flex-col items-center justify-center gap-6 text-center lg:ml-auto lg:items-end lg:text-right'>
             <Button>Request Invite</Button>
             <p className='text-sm text-eb-grayish-blue'>
               © Easybank. All Rights Reserved
