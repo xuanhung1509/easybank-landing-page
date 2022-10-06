@@ -39,8 +39,10 @@ function Articles() {
   return (
     <section className='bg-eb-light-gray py-16'>
       <div className='container'>
-        <h2 className='mb-12 text-4xl text-eb-dark-blue'>Latest Articles</h2>
-        <div className='flex items-stretch justify-between gap-6'>
+        <h2 className='mb-6 text-center text-2xl text-eb-dark-blue md:text-4xl lg:mb-12 lg:text-left tiny:text-xl'>
+          Latest Articles
+        </h2>
+        <div className='grid grid-cols-1 items-stretch justify-between gap-6 sm:grid-cols-2 lg:grid-cols-4'>
           {articleItems.map((item) => (
             <ArticleItem key={item.title} {...item} />
           ))}
@@ -52,7 +54,7 @@ function Articles() {
 
 function ArticleItem({ thumbnail, author, title, summary }) {
   return (
-    <div className='flex max-w-sm flex-col items-stretch overflow-hidden rounded bg-white'>
+    <div className='mx-auto flex max-w-sm flex-col items-stretch overflow-hidden rounded bg-white'>
       <div className='h-48'>
         <img
           src={thumbnail}
@@ -63,7 +65,7 @@ function ArticleItem({ thumbnail, author, title, summary }) {
       <div className='flex flex-col items-start gap-3 p-6'>
         <small className='text-xs text-eb-grayish-blue'>By {author}</small>
         <a href='#somewhere'>
-          <h4 className='text-lg leading-5 text-eb-dark-blue transition-colors hover:text-eb-lime-green'>
+          <h4 className='text-lg leading-5 text-eb-dark-blue transition-colors hover:text-eb-lime-green md:text-xl'>
             {title}
           </h4>
         </a>
