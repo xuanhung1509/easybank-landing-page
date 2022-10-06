@@ -1,31 +1,56 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from './shared';
 import logo from '../assets/logo.svg';
+import { ReactComponent as IconHamburger } from '../assets/icon-hamburger.svg';
+import { ReactComponent as IconClose } from '../assets/icon-close.svg';
 
 const navItems = ['Home', 'About', 'Contact', 'Blog', 'Careers'];
 
 function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <header className='bg-white py-3'>
-      <div className='container'>
-        <div className='flex items-center justify-between gap-2'>
-          <div>
-            <img src={logo} alt='logo' />
+    <>
+      <header className='relative z-20 bg-white py-2 shadow'>
+        <div className='container'>
+          <div className='flex items-center justify-between gap-2'>
+            <div>
+              <img src={logo} alt='logo' />
+            </div>
+
+            <ul
+              className={`absolute top-full left-1/2 z-20 mt-4 flex w-5/6 -translate-x-1/2 flex-col items-center justify-center gap-6 rounded-md bg-white py-6 shadow-lg transition-all duration-300 md:static md:mt-0 md:w-auto md:translate-x-0 md:flex-row md:shadow-none ${
+                !menuOpen && 'translate-x-full opacity-0 lg:opacity-100'
+              }`}
+            >
+              {navItems.map((item) => (
+                <li
+                  key={item}
+                  className='cursor-pointer text-sm text-eb-dark-blue transition-colors hover:text-eb-dark-blue md:text-eb-grayish-blue'
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+
+            <button
+              type='button'
+              className='z-10 flex h-10 w-10 items-center justify-center md:hidden'
+              onClick={() => setMenuOpen((prev) => !prev)}
+            >
+              {menuOpen ? <IconClose /> : <IconHamburger />}
+            </button>
+            <Button className='hidden md:block'>Request Invite</Button>
           </div>
-          <ul className='flex items-center justify-center gap-4 '>
-            {navItems.map((item) => (
-              <li
-                key={item}
-                className='cursor-pointer text-sm text-eb-grayish-blue transition-colors hover:text-eb-dark-blue'
-              >
-                {item}
-              </li>
-            ))}
-          </ul>
-          <Button>Request Invite</Button>
         </div>
-      </div>
-    </header>
+      </header>
+      <div
+        className={`fixed top-0 left-0 z-10 h-full w-full bg-gradient-to-b from-eb-dark-blue/50 to-white transition-all duration-300 ${
+          !menuOpen && '-translate-y-full opacity-0'
+        }`}
+        onClick={() => setMenuOpen(false)}
+      />
+    </>
   );
 }
 
