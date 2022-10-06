@@ -35,14 +35,16 @@ function Features() {
   return (
     <section className='bg-eb-light-grayish-blue py-28'>
       <div className='container'>
-        <div className='max-w-xl'>
-          <h2 className='text-4xl text-eb-dark-blue'>Why choose Easybank?</h2>
-          <p className='mt-6 mb-12 text-eb-grayish-blue'>
+        <div className='mx-auto max-w-xl lg:mx-0'>
+          <h2 className='px-2 text-center text-2xl text-eb-dark-blue md:text-4xl lg:px-0 lg:text-left tiny:text-xl'>
+            Why choose Easybank?
+          </h2>
+          <p className='mt-6 mb-12 px-2 text-center text-sm text-eb-grayish-blue md:text-base lg:px-0 lg:text-left'>
             We leverage Open Banking to turn your bank account into your
             financial hub. Control your finances like never before.
           </p>
         </div>
-        <div className='flex items-stretch justify-between gap-8'>
+        <div className='grid grid-cols-1 items-stretch justify-between gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4 lg:flex-row'>
           {featureItems.map((item) => (
             <FeatureItem key={item.title} {...item} />
           ))}
@@ -54,12 +56,14 @@ function Features() {
 
 function FeatureItem({ icon, title, description }) {
   return (
-    <div className='flex flex-col gap-5'>
+    <div className='flex flex-col items-center gap-5 text-center sm:items-start sm:text-left'>
       <div className='mb-4'>
         <img src={icon} alt={title} />
       </div>
-      <h3 className='text-2xl text-eb-dark-blue'>{title}</h3>
-      <p className='text-eb-grayish-blue'>{description}</p>
+      <h3 className='text-xl text-eb-dark-blue md:text-2xl tiny:text-lg'>
+        {title}
+      </h3>
+      <p className='text-sm text-eb-grayish-blue'>{description}</p>
     </div>
   );
 }
