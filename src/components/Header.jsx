@@ -20,7 +20,7 @@ function Header() {
 
             <ul
               className={`absolute top-full left-1/2 z-20 mt-4 flex w-5/6 -translate-x-1/2 flex-col items-center justify-center gap-6 rounded-md bg-white py-6 shadow-lg transition-all duration-300 md:static md:mt-0 md:w-auto md:translate-x-0 md:flex-row md:shadow-none ${
-                !menuOpen && 'translate-x-full opacity-0 lg:opacity-100'
+                !menuOpen && 'opacity-0 lg:opacity-100'
               }`}
             >
               {navItems.map((item) => (

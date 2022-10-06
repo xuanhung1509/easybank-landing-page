@@ -5,7 +5,7 @@ function Hero() {
   return (
     <section className='hero relative flex flex-col justify-center bg-eb-light-gray'>
       <div className='container'>
-        <div className='relative top-28 flex flex-col items-center justify-center gap-6 px-4 text-center sm:top-56 lg:top-0 lg:w-[40%] lg:items-start lg:px-0 lg:text-left tiny:top-32'>
+        <div className='relative top-28 flex flex-col items-center justify-center gap-6 px-2 text-center sm:top-56 lg:top-0 lg:w-[40%] lg:items-start lg:px-0 lg:text-left tiny:top-32'>
           <h1 className='text-3xl leading-tight text-eb-dark-blue md:text-5xl tiny:text-2xl'>
             Next generation digital banking
           </h1>
