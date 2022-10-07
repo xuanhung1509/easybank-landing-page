@@ -11,7 +11,7 @@ function Header() {
 
   return (
     <>
-      <header className='relative z-20 bg-white py-2 shadow'>
+      <header className='relative z-30 bg-white py-2 shadow'>
         <div className='container'>
           <div className='flex items-center justify-between gap-2'>
             <div>
@@ -45,7 +45,7 @@ function Header() {
         </div>
       </header>
       <div
-        className={`fixed top-0 left-0 z-10 h-full w-full bg-gradient-to-b from-eb-dark-blue/50 to-white transition-all duration-300 ${
+        className={`fixed top-0 left-0 z-20 h-full w-full bg-gradient-to-b from-eb-dark-blue/50 to-white transition-all duration-300 ${
           !menuOpen && '-translate-y-full opacity-0'
         }`}
         onClick={() => setMenuOpen(false)}
