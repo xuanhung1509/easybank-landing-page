@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/shared';
 import { ReactComponent as IconHamburger } from '@/assets/icon-hamburger.svg';
 import { ReactComponent as IconClose } from '@/assets/icon-close.svg';
@@ -8,6 +8,15 @@ const navItems = ['Home', 'About', 'Contact', 'Blog', 'Careers'];
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  // Prevent scroll if menu is open
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.classList.add('overflow-hidden');
+    } else {
+      document.body.classList.remove('overflow-hidden');
+    }
+  }, [menuOpen]);
 
   return (
     <>
