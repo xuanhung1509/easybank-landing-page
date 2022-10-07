@@ -1,4 +1,7 @@
 module.exports = {
+  env: {
+    browser: true,
+  },
   extends: ['airbnb', 'prettier', 'plugin:react/recommended'],
   plugins: ['prettier', 'react'],
   rules: {
@@ -9,5 +12,16 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
     'jsx-a11y/no-static-element-interactions': 'off',
+  },
+  settings: {
+    'import/resolver': {
+      alias: {
+        map: [
+          ['@/components', './src/components'],
+          ['@/assets', './src/assets'],
+        ],
+        extensions: ['.jsx'],
+      },
+    },
   },
 };

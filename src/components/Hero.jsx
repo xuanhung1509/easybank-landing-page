@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from './shared';
+import { Button } from '@/components/shared';
 
 function Hero() {
   return (

@@ -1,8 +1,8 @@
 import React from 'react';
-import icon1 from '../assets/icon-online.svg';
-import icon2 from '../assets/icon-budgeting.svg';
-import icon3 from '../assets/icon-onboarding.svg';
-import icon4 from '../assets/icon-api.svg';
+import icon1 from '@/assets/icon-online.svg';
+import icon2 from '@/assets/icon-budgeting.svg';
+import icon3 from '@/assets/icon-onboarding.svg';
+import icon4 from '@/assets/icon-api.svg';
 
 const featureItems = [
   {

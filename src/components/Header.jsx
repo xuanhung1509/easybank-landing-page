@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Button } from './shared';
-import logo from '../assets/logo.svg';
-import { ReactComponent as IconHamburger } from '../assets/icon-hamburger.svg';
-import { ReactComponent as IconClose } from '../assets/icon-close.svg';
+import { Button } from '@/components/shared';
+import { ReactComponent as IconHamburger } from '@/assets/icon-hamburger.svg';
+import { ReactComponent as IconClose } from '@/assets/icon-close.svg';
+import logo from '@/assets/logo.svg';
 
 const navItems = ['Home', 'About', 'Contact', 'Blog', 'Careers'];
 

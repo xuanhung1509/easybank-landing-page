@@ -1,8 +1,8 @@
 import React from 'react';
-import thumbnail1 from '../assets/image-currency.jpg';
-import thumbnail2 from '../assets/image-restaurant.jpg';
-import thumbnail3 from '../assets/image-plane.jpg';
-import thumbnail4 from '../assets/image-confetti.jpg';
+import thumbnail1 from '@/assets/image-currency.jpg';
+import thumbnail2 from '@/assets/image-restaurant.jpg';
+import thumbnail3 from '@/assets/image-plane.jpg';
+import thumbnail4 from '@/assets/image-confetti.jpg';
 
 const articleItems = [
   {

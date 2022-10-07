@@ -1,11 +1,11 @@
 import React from 'react';
-import { Button } from './shared';
-import logo from '../assets/logo-white.svg';
-import { ReactComponent as IconFacebook } from '../assets/icon-facebook.svg';
-import { ReactComponent as IconYoutube } from '../assets/icon-youtube.svg';
-import { ReactComponent as IconTwitter } from '../assets/icon-twitter.svg';
-import { ReactComponent as IconPinterest } from '../assets/icon-pinterest.svg';
-import { ReactComponent as IconInstagram } from '../assets/icon-instagram.svg';
+import { Button } from '@/components/shared';
+import { ReactComponent as IconFacebook } from '@/assets/icon-facebook.svg';
+import { ReactComponent as IconYoutube } from '@/assets/icon-youtube.svg';
+import { ReactComponent as IconTwitter } from '@/assets/icon-twitter.svg';
+import { ReactComponent as IconPinterest } from '@/assets/icon-pinterest.svg';
+import { ReactComponent as IconInstagram } from '@/assets/icon-instagram.svg';
+import logo from '@/assets/logo-white.svg';
 
 const socialLinks = [
   {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, Footer, Hero, Features, Articles } from './components';
+import { Header, Footer, Hero, Features, Articles } from '@/components';
 
 function App() {
   return (
