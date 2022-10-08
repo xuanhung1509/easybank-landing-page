@@ -20,7 +20,7 @@ function Header() {
 
   return (
     <>
-      <header className='relative z-30 bg-white py-2 shadow'>
+      <header className='relative z-30 bg-white py-2'>
         <div className='container'>
           <div className='flex items-center justify-between gap-2'>
             <div>
