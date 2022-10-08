@@ -11,22 +11,27 @@ const socialLinks = [
   {
     icon: <IconFacebook className='social-icon' />,
     url: 'http://facebook.com',
+    label: 'Facebook',
   },
   {
     icon: <IconYoutube className='social-icon' />,
     url: 'http://youtube.com',
+    label: 'YouTube',
   },
   {
     icon: <IconTwitter className='social-icon' />,
     url: 'http://twitter.com',
+    label: 'Twitter',
   },
   {
     icon: <IconPinterest className='social-icon' />,
     url: 'http://pinterest.com',
+    label: 'Pinterest',
   },
   {
     icon: <IconInstagram className='social-icon' />,
     url: 'http://instagram.com',
+    label: 'Instagram',
   },
 ];
 
@@ -47,8 +52,8 @@ function Footer() {
           <div className='flex flex-col items-center justify-between gap-8'>
             <img src={logo} alt='logo' />
             <div className='flex items-center justify-center gap-3'>
-              {socialLinks.map(({ url, icon }) => (
-                <a key={url} href={url}>
+              {socialLinks.map(({ url, icon, label }) => (
+                <a key={url} href={url} aria-label={label}>
                   {icon}
                 </a>
               ))}

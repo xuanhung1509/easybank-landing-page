@@ -65,9 +65,9 @@ function ArticleItem({ thumbnail, author, title, summary }) {
       <div className='flex flex-col items-start gap-3 p-6'>
         <small className='text-xs text-eb-grayish-blue'>By {author}</small>
         <a href='#somewhere'>
-          <h4 className='text-lg leading-5 text-eb-dark-blue transition-colors hover:text-eb-lime-green md:text-xl'>
+          <h3 className='text-lg leading-5 text-eb-dark-blue transition-colors hover:text-eb-lime-green md:text-xl'>
             {title}
-          </h4>
+          </h3>
         </a>
         <p className='text-sm text-eb-grayish-blue'>{summary}</p>
       </div>
